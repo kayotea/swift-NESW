@@ -1,26 +1,107 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="25J-oy-2Po">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Compass View Controller-->
+        <scene sceneID="9L7-jJ-cKt">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="25J-oy-2Po" customClass="CompassViewController" customModule="tabletest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="9iZ-G9-BOg"/>
+                        <viewControllerLayoutGuide type="bottom" id="weV-CB-pgm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="qCU-5s-ENQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9F-wT-LD4">
+                                <rect key="frame" x="167" y="28" width="40" height="30"/>
+                                <state key="normal" title="North"/>
+                                <connections>
+                                    <action selector="compassButtonPressed:" destination="25J-oy-2Po" eventType="touchUpInside" id="O6b-ab-dJ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-BB-HBu">
+                                <rect key="frame" x="24" y="318" width="35" height="30"/>
+                                <state key="normal" title="West"/>
+                                <connections>
+                                    <action selector="compassButtonPressed:" destination="25J-oy-2Po" eventType="touchUpInside" id="cWI-uq-1WC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDS-rR-ne7">
+                                <rect key="frame" x="321" y="318" width="30" height="30"/>
+                                <state key="normal" title="East"/>
+                                <connections>
+                                    <action selector="compassButtonPressed:" destination="25J-oy-2Po" eventType="touchUpInside" id="wTB-kd-c61"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYY-GB-g0o">
+                                <rect key="frame" x="167" y="629" width="41" height="30"/>
+                                <state key="normal" title="South"/>
+                                <connections>
+                                    <action selector="compassButtonPressed:" destination="25J-oy-2Po" eventType="touchUpInside" id="dLr-pN-17u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92915591364434469" green="1" blue="0.82519779703324092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EN7-BB-HBu" firstAttribute="leading" secondItem="qCU-5s-ENQ" secondAttribute="leadingMargin" constant="8" id="5au-Bo-rgB"/>
+                            <constraint firstItem="AYY-GB-g0o" firstAttribute="centerX" secondItem="qCU-5s-ENQ" secondAttribute="centerX" id="CWa-1M-8eV"/>
+                            <constraint firstItem="UDS-rR-ne7" firstAttribute="centerY" secondItem="qCU-5s-ENQ" secondAttribute="centerY" id="EyX-Qs-gZp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UDS-rR-ne7" secondAttribute="trailing" constant="8" id="Iyy-bf-cee"/>
+                            <constraint firstItem="n9F-wT-LD4" firstAttribute="top" secondItem="9iZ-G9-BOg" secondAttribute="bottom" constant="8" symbolic="YES" id="JzM-7u-fj9"/>
+                            <constraint firstItem="weV-CB-pgm" firstAttribute="top" secondItem="AYY-GB-g0o" secondAttribute="bottom" constant="8" symbolic="YES" id="MIv-vG-MDG"/>
+                            <constraint firstItem="EN7-BB-HBu" firstAttribute="centerY" secondItem="qCU-5s-ENQ" secondAttribute="centerY" id="gOb-5G-DC1"/>
+                            <constraint firstItem="n9F-wT-LD4" firstAttribute="centerX" secondItem="qCU-5s-ENQ" secondAttribute="centerX" id="mOe-gU-buw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Rr1-32-efg" kind="presentation" identifier="mainSegue" id="cwI-Iu-vgJ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdI-nG-mPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="961" y="-31"/>
+        </scene>
+        <!--Direction View Controller-->
+        <scene sceneID="yoM-4y-LFE">
+            <objects>
+                <viewController id="Rr1-32-efg" customClass="DirectionViewController" customModule="tabletest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2g-zZ-mET"/>
+                        <viewControllerLayoutGuide type="bottom" id="y8y-zf-0qP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K6n-ms-IlT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr5-iR-JBu">
+                                <rect key="frame" x="156" y="318" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Direction"/>
+                                <connections>
+                                    <segue destination="MT5-Ef-amm" kind="unwind" unwindAction="unwindToCompassViewWithSender:" id="J77-1s-bei"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81757680069637506" green="1" blue="0.90674253460388465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="directionButton" destination="cr5-iR-JBu" id="b6u-A6-O6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjT-Bj-lOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MT5-Ef-amm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1749.5999999999999" y="-31.03448275862069"/>
         </scene>
     </scenes>
 </document>
